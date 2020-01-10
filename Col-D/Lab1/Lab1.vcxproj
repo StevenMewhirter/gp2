@@ -72,24 +72,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="GameAudio.cpp" />
     <ClCompile Include="GameShaders.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainGame.cpp" />
-    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="MeshCreator.cpp" />
+    <ClCompile Include="myGame.cpp" />
     <ClCompile Include="obj_loader.cpp" />
     <ClCompile Include="stb_image.c" />
     <ClCompile Include="TextureHolder.cpp" />
     <ClCompile Include="ViewScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Audio.h" />
-    <ClInclude Include="Camera.h" />
+    <ClInclude Include="GameAudio.h" />
     <ClInclude Include="GameShaders.h" />
-    <ClInclude Include="MainGame.h" />
-    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="MainCamera.h" />
     <ClInclude Include="MeshCreator.h" />
+    <ClInclude Include="myGame.h" />
     <ClInclude Include="obj_loader.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="TextureHolder.h" />
@@ -101,9 +99,26 @@
     <None Include="..\res\shader.vert" />
   </ItemGroup>
   <ItemGroup>
+    <Object Include="..\res\Bucket1.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="..\res\Crab.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="..\res\GameNet.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Object>
     <Object Include="..\res\monkey3.obj">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\res\GameMusic.wav">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </Media>
+    <Media Include="..\res\Score.wav">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </Media>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

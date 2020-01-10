@@ -18,19 +18,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MainGame.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="stb_image.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="obj_loader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Audio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ViewScreen.cpp">
@@ -45,27 +36,21 @@
     <ClCompile Include="MeshCreator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GameAudio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MainGame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="transform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="obj_loader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Audio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ViewScreen.h">
@@ -78,6 +63,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MeshCreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainCamera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameAudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -93,5 +87,22 @@
     <Object Include="..\res\monkey3.obj">
       <Filter>Resource Files</Filter>
     </Object>
+    <Object Include="..\res\Crab.obj">
+      <Filter>Resource Files</Filter>
+    </Object>
+    <Object Include="..\res\Bucket1.obj">
+      <Filter>Resource Files</Filter>
+    </Object>
+    <Object Include="..\res\GameNet.obj">
+      <Filter>Resource Files</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\res\GameMusic.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="..\res\Score.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>

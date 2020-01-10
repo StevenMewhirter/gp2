@@ -2,7 +2,7 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
-#include "camera.h"
+#include "MainCamera.h"
 
 struct Transform
 {

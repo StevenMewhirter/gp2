@@ -42,9 +42,9 @@ void GameShaders::BindShader()
 	glUseProgram(shaderProgram); //installs the program object specified by program as part of rendering state
 }
 
-void GameShaders::UpdateShader(const Transform& transform, const Camera& camera)
+void GameShaders::UpdateShader(const Transform& transform, const MainCamera& camera)
 {
-	glm::mat4 mvp = camera.GetViewProjection() * transform.GetModelDimensions(); // updates the transform of models and viewpoint of camera 
+	glm::mat4 mvp = camera.GetCameraViewProjection() * transform.GetModelDimensions(); // updates the transform of models and viewpoint of camera 
 	glUniformMatrix4fv(numUniforms[TRANSFORM_U], 1, GLU_FALSE, &mvp[0][0]);
 }
 

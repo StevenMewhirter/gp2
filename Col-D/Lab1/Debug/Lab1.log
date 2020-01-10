@@ -1,3 +1,2 @@
-﻿  MeshCreator.cpp
-C:\Users\steve\OneDrive\Documents\GP2\gp2\Col-D\Lab1\MeshCreator.cpp(61,13): warning C4930: 'SphereMesh meshSphere(void)': prototyped function not called (was a variable definition intended?)
+﻿  myGame.cpp
   Lab1.vcxproj -> C:\Users\steve\OneDrive\Documents\GP2\gp2\Col-D\Debug\Lab1.exe

@@ -2,7 +2,7 @@
 #include <string>
 #include <GL\glew.h>
 #include "transform.h"
-#include "Camera.h"
+#include "MainCamera.h"
 
 class GameShaders
 {
@@ -10,7 +10,7 @@ public:
 	GameShaders(const std::string& filename);
 
 	void BindShader(); //Set gpu to use our shaders
-	void UpdateShader(const Transform& transform, const Camera& camera);//updates the transform and camera
+	void UpdateShader(const Transform& transform, const MainCamera& camera);//updates the transform and camera
 
 	std::string GameShaders::LoadGameShader(const std::string& fileName);//method for loading the shader 
 	void GameShaders::CheckGameShaderError(GLuint gameShader, GLuint flag, bool isProgram, const std::string& errorShader);//checking for errors 

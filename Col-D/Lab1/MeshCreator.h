@@ -7,14 +7,14 @@
 struct VertexMesh
 {
 public:
-	VertexMesh(const glm::vec3& position, const glm::vec2& textureCoordinates)
+	VertexMesh(const glm::vec3& position, const glm::vec2& textureCoordinates) // used to store the position of the texture
 	{
 		this->position = position;
 		this->textureCoordinates = textureCoordinates;
 		this->normal = normal;
 	}
 
-	glm::vec3* GetPosition() { return &position; }
+	glm::vec3* GetPosition() { return &position; } //Getters
 	glm::vec2* GetTextureCoordinates() { return &textureCoordinates; }
 	glm::vec3* GetNormal() { return &normal; }
 

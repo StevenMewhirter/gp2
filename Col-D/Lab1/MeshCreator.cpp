@@ -5,7 +5,7 @@ void MeshCreator::initMesh(VertexMesh* vertices, unsigned int numberOfVertices, 
 {
 	IndexedModel model;
 
-	for (unsigned int i = 0; i < numberOfVertices; i++)
+	for (unsigned int i = 0; i < numberOfVertices; i++)//get the positions of the models
 	{
 		model.positions.push_back(*vertices[i].GetPosition());
 		model.textureCoordinate.push_back(*vertices[i].GetTextureCoordinates());
@@ -15,13 +15,13 @@ void MeshCreator::initMesh(VertexMesh* vertices, unsigned int numberOfVertices, 
 	for (unsigned int i = 0; i < numberOfIndices; i++)
 		model.indices.push_back(indices[i]);
 
-	initialiseModel(model);
+	initialiseModel(model); // initialise the current model
 }
 
 void MeshCreator::initialiseModel(const IndexedModel& model)
 {
 
-	drawNum = model.indices.size();
+	drawNum = model.indices.size(); // draw the models to the screen
 
 	glGenVertexArrays(1, &vertexArrayObject); //generate a vertex array and store it in the VAO
 	glBindVertexArray(vertexArrayObject); //bind the VAO (any operation that works on a VAO will work on our bound VAO - binding)
@@ -54,7 +54,7 @@ MeshCreator::MeshCreator()
 	drawNum = NULL;
 }
 
-void MeshCreator::load_Model(const std::string& filename)
+void MeshCreator::load_Model(const std::string& filename) // loads the model that was initialised 
 {
 	IndexedModel model = OBJModel(filename).ToIndexedModel();
 	initialiseModel(model);
@@ -66,7 +66,7 @@ MeshCreator::~MeshCreator()
 	glDeleteVertexArrays(1, &vertexArrayObject); // delete arrays
 }
 
-void MeshCreator::drawMesh()
+void MeshCreator::drawMesh() // draws the elements of the mesh
 {
 	glBindVertexArray(vertexArrayObject);
 
@@ -76,7 +76,7 @@ void MeshCreator::drawMesh()
 	glBindVertexArray(0);
 }
 
-void MeshCreator::update_SData(glm::vec3 pos, float radius)
+void MeshCreator::update_SData(glm::vec3 pos, float radius) // updates the mesh data 
 {
 	meshSphere.SetPosition(pos);
 	meshSphere.SetSphereRadius(radius);
